@@ -1,9 +1,7 @@
-# Vue 3 + TypeScript + Vite
+所涉及地图要素数据都由Geoserver发布，该部分需要自己配置，同时记得在vite.config中将代理地址进行更改，获取的数据的函数在Geoserver.ts文件中需要传入服务的工作空间名称和图层名称。
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Public文件存放了静态资源，其中NewYork里都是城市数据，通过Geoserver发布，或者用GIS软件转成JSON处理都可以
 
-## Recommended Setup
+PolyLine_material里是动态纹理的图片
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+SkyBOX里是天空盒图片
