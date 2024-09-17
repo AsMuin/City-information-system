@@ -52,8 +52,10 @@
             </div>
         </template>
     </el-dialog>
-
-    <el-button plain @click="centerDialogVisible = true" id="HeatBtn">人口热力图设置</el-button>
+    <router-link to="/layout">
+        <el-button link type="danger" text id="BackSystem">返回用户界面</el-button>
+    </router-link>
+    <el-button plain @click="centerDialogVisible = true" id="HeatBtn">舆论热力图设置</el-button>
     <el-dropdown @command="handleCommand">
         <el-button size="large" type="primary">
             功能列表
@@ -405,7 +407,13 @@ onMounted(() => {
 #HeatBtn {
     position: absolute;
     left: 40px;
-    top: 70px;
+    top: 80px;
+    z-index: 3;
+}
+#BackSystem {
+    position: absolute;
+    left: 40px;
+    top: 40px;
     z-index: 3;
 }
 </style>

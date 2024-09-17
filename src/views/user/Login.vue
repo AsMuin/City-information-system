@@ -74,7 +74,7 @@ async function login() {
     //把得到的token存储到pinia的userToken中
     userTokenStore.setToken(result.data); //result.data里存储token字符串
     //跳转到首页 路由完成跳转
-    await router.push('/school');
+    await router.push('/city_Day');
 }
 
 //定义函数，清空注册数据模型的数据

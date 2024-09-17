@@ -30,12 +30,8 @@
             "@utils/*": ["./src/utils/*"]
         }
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/**/*.vue",
-        "src/utils/map_view/PolylineTrailMaterialProperty.ts"
-    ],
+    "exclude": ["node_modules", "dist", "public"],
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
     "references": [
         {
             "path": "./tsconfig.node.json"

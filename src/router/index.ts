@@ -6,8 +6,8 @@ import ArticleManage from '../views/article/ArticleManage.vue';
 import UserInfo from '../views/user/UserInfo.vue';
 import UserAvatar from '../views/user/UserAvatar.vue';
 import UserResetPassword from '../views/user/UserResetPassword.vue';
-import city_Day from '../views/city_Day.vue';
-import city_Night from '../views/city_Night.vue';
+import city_Day from '../views/map_view/city_Day.vue';
+import city_Night from '../views/map_view/city_Night.vue';
 const routes = [
     {
         path: '/',

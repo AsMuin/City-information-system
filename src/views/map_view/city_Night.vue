@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import Viewer_Night from '../components/map_view/Viewer_Night.vue';
-import popup_info from '../components/map_view/popup_info.vue';
+import Viewer_Night from '@/components/map_view/Viewer_Night.vue';
+import popup_info from '@/components/map_view/popup_info.vue';
 </script>
 
 <style scoped></style>
