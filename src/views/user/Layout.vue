@@ -26,12 +26,17 @@ const userInfoStore = getUserInfoStore();
 
 //调用函数，获取用户详细信息
 async function getUserInfo() {
+    try {
     //调用接口
     const result = await getUserInfoService();
     console.table(result);
-    const position = await getPosition() 
+    const position = await getPosition();
+    userInfoStore.setUserInfo()
     //数据存储到pinia中
     userInfoStore.setUserInfo(result.data);
+    } catch (error) {
+        ElMessage.error('获取用户信息失败');
+    }
 }
 
 getUserInfo();

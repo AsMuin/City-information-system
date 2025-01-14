@@ -93,7 +93,7 @@ import {CesiumHeatmap} from 'cesium-heatmap-es6';
 import {Geoserver_WFS} from '@utils/map_view/Geoserver';
 import {addStreet} from '@utils/map_view/StreetMaterial';
 import {ArrowDown} from '@element-plus/icons-vue';
-import polyLineMaterial from '@/asserts/map/polyLine_material.png'
+import polyLineMaterial from '@/assets/map/polyLine_material.png';
 import '@/assets/layout/css/app.css';
 
 

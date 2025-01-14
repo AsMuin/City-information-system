@@ -7,6 +7,7 @@ import {loginService, registerService} from '../../api/user';
 import {ElMessage} from 'element-plus';
 import {useRouter} from 'vue-router';
 import {getUserTokenStore} from '../../stores/token';
+import getPosition from '@utils/user_article/getCurrentPosition';
 const userTokenStore = getUserTokenStore();
 const router = new useRouter();
 
@@ -61,7 +62,7 @@ async function register() {
 //表单数据校验
 //登录函数
 async function login() {
-    //调用接口，完成登录
+    try {
     let result = await loginService(registerData.value);
     // if (result.code === 0){
     //   alert( "登陆成功")
@@ -75,6 +76,9 @@ async function login() {
     userTokenStore.setToken(result.data); //result.data里存储token字符串
     //跳转到首页 路由完成跳转
     await router.push('/city_Day');
+    } catch (error) {
+        ElMessage.error('登录失败');
+    }
 }
 
 //定义函数，清空注册数据模型的数据
