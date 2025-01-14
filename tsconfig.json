@@ -1,9 +1,4 @@
 {
-    "ts-node": {
-        "compilerOptions": {
-            "module": "CommonJS"
-        }
-    },
     "compilerOptions": {
         "target": "ES2020",
         "useDefineForClassFields": true,
@@ -23,15 +18,12 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "baseUrl": "",
         "paths": {
-            // 用于设置模块名到基于baseUrl的路径映射
             "@/*": ["./src/*"],
             "@utils/*": ["./src/utils/*"]
-        }
+          }
     },
     "exclude": ["node_modules", "dist", "public"],
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
     "references": [
         {
             "path": "./tsconfig.node.json"

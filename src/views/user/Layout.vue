@@ -17,6 +17,7 @@ import getUserInfoStore from '../../stores/userInfo';
 import {useRouter} from 'vue-router';
 import {ElMessage, ElMessageBox} from 'element-plus';
 import {getUserTokenStore} from '../../stores/token';
+import getPosition from '@utils/user_article/getCurrentPosition';
 
 const userToken = getUserTokenStore();
 
@@ -26,9 +27,9 @@ const userInfoStore = getUserInfoStore();
 //调用函数，获取用户详细信息
 async function getUserInfo() {
     //调用接口
-    let result = await getUserInfoService();
+    const result = await getUserInfoService();
     console.table(result);
-
+    const position = await getPosition() 
     //数据存储到pinia中
     userInfoStore.setUserInfo(result.data);
 }

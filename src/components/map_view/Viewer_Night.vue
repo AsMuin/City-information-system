@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted, getCurrentInstance, ref, reactive} from 'vue';
+import {onMounted, getCurrentInstance, ref} from 'vue';
 import * as Cesium from 'cesium';
 import {createBaseViewer} from '@utils/map_view/createBaseViewer';
 import {ElMessage} from 'element-plus';
@@ -93,7 +93,9 @@ import {CesiumHeatmap} from 'cesium-heatmap-es6';
 import {Geoserver_WFS} from '@utils/map_view/Geoserver';
 import {addStreet} from '@utils/map_view/StreetMaterial';
 import {ArrowDown} from '@element-plus/icons-vue';
+import polyLineMaterial from '@/asserts/map/polyLine_material.png'
 import '@/assets/layout/css/app.css';
+
 
 let viewer: Cesium.Viewer;
 // const popupVisible = ref(false);
@@ -314,7 +316,7 @@ const STREET = {
                 (this.StreetPolyLine as any) = addStreet(
                     viewer,
                     features,
-                    '/PolyLine_material/Snipaste7.png'
+                    polyLineMaterial
                 );
             }
         });

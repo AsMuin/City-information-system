@@ -14,10 +14,11 @@ export const getUserInfoStore = defineStore(
             userPic: '',
             createTime: '',
             updateTime: '',
-            userRole: ''
+            userRole: '',
+            position:[null,null]
         });
         const setUserInfo = newUserInfo => {
-            userInfo.value = newUserInfo;
+            userInfo.value = {...userInfo.value,...newUserInfo};
         };
         const removeUserInfo = () => {
             userInfo.value = {};
